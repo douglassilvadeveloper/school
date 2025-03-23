@@ -20,6 +20,7 @@ defmodule SchoolWeb.Router do
     # get "/", PageController, :home
     live "/", Home.HomeLive, :index
     live "/maintenance", Maintenance.MaintenanceLive, :index
+    live "/plataforma", Plataforma.PlataformaLive, :index
   end
 
   # Other scopes may use custom stacks.
