@@ -17,7 +17,9 @@ defmodule SchoolWeb.Router do
   scope "/", SchoolWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
+    live "/", Home.HomeLive, :index
+    live "/maintenance", Maintenance.MaintenanceLive, :index
   end
 
   # Other scopes may use custom stacks.
