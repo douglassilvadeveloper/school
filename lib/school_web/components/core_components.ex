@@ -440,6 +440,20 @@ defmodule SchoolWeb.CoreComponents do
     """
   end
 
+  @doc """
+  Renders a subtitle.
+  """
+
+  slot :inner_block, required: true
+
+  def subtitle(assigns) do
+    ~H"""
+      <p class="mt-2 text-sm leading-6 text-zinc-600">
+        <%= render_slot(@inner_block) %>
+      </p>
+    """
+  end
+
   @doc ~S"""
   Renders a table with generic styling.
 

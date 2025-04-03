@@ -21,6 +21,8 @@ defmodule SchoolWeb.Router do
     live "/", Home.HomeLive, :index
     live "/maintenance", Maintenance.MaintenanceLive, :index
     live "/plataforma", Plataforma.PlataformaLive, :index
+    live "/plataforma/direito", Plataforma.DireitoLive, :index
+    live "/plataforma/direito-penal", Plataforma.DireitoPenalLive, :index
   end
 
   # Other scopes may use custom stacks.

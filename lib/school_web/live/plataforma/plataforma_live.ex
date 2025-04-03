@@ -1,33 +1,36 @@
 defmodule SchoolWeb.Plataforma.PlataformaLive do
   use SchoolWeb, :live_view
 
+  alias SchoolWeb.MenuComponents
+
   def render(assigns) do
     ~H"""
     <div class="relative isolate pt-20">
         <div class="flex mb-4 border-t border-gray-200 h-screen">
             <aside id="default-sidebar" class="left-0 z-40 w-64 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-                <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-                    <ul class="space-y-2 font-medium">
-                        <li>
-                            <.link navigate={~p"/plataforma"} class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <.icon name="hero-home" class="h-5 w-5" />
-                            <span class="ms-3">Início</span>
-                            </.link>
-                        </li>
-                        <li>
-                            <.link navigate={~p"/maintenance"} class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                            <.icon name="hero-academic-cap" class="h-5 w-5" />
-                            <span class="flex-1 ms-3 whitespace-nowrap">Direito Constitucional</span>
-                            </.link>
-                        </li>
-                    </ul>
-                </div>
+                <MenuComponents.menu items={[
+                    %{path: "/plataforma", icon: "home", label: "Início"},
+                    %{path: "/plataforma/direito", icon: "book-open", label: "Direito"},
+                    %{path: "/plataforma/direito-penal", icon: "book-open", label: "Direito Penal"}
+                ]} />
             </aside>
 
-            <div class="flex-1">
+            <div class="flex-1 mx-auto max-w-4xl">
                 <div class="dark:bg-gray-800 px-3 py-6">
-                    <p class="dark:text-gray-500">
-                        Olá, seja bem-vindo à Plataforma de Aprendizagem da Escola Aberta de Direito!
+                    <p class="mb-2 dark:text-gray-500">
+                        Olá, seja bem-vindo à <span class="font-bold">Escola Aberta de Direito</span>!
+                    </p>
+                    <p class="mb-2 dark:text-gray-500">
+                        É com imenso prazer que apresentamos a nossa <span class="font-bold">Plataforma de Aprendizagem</span>.
+                    </p>
+                    <p class="mb-2 dark:text-gray-500">
+                        Aqui você terá acesso a um conteúdo interativo totalmente focado em proporcionar a você a formação de uma boa base de conhecimento sobre o mundo jurídico. 
+                    </p>
+                    <p class="mb-2 dark:text-gray-500">
+                        Fique à vontade para navegar pelo menu ao lado.
+                    </p>
+                    <p class="mb-2 dark:text-gray-500">
+                        Tenha um excelente estudo!
                     </p>
                 </div>
             </div>

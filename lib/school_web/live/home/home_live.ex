@@ -17,7 +17,7 @@ defmodule SchoolWeb.Home.HomeLive do
           <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Aprenda Direito de forma gratuita!</h1>
           <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Aprenda o que é e como funciona o Direito mesmo sem ter conhecimento na área.</p>
           <div class="mt-10 flex items-center justify-center gap-x-6">
-            <.link navigate={~p"/maintenance"} class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Começar</.link>
+            <.link navigate={~p"/plataforma"} class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Começar</.link>
             <.link navigate={~p"/maintenance"} class="text-sm/6 font-semibold text-gray-900">Leia mais <span aria-hidden="true">→</span></.link>
           </div>
         </div>
