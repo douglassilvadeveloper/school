@@ -15,6 +15,19 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+      },
+      fontFamily: {
+        serif: ['Merriweather', 'serif'],
+        sans: ['Source Sans Pro', 'sans-serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        }
       }
     },
   },

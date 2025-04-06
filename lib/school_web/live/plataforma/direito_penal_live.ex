@@ -22,10 +22,20 @@ defmodule SchoolWeb.Plataforma.DireitoPenalLive do
                         <:subtitle>Introdução</:subtitle>
                     </.header>
                     <p>
-                      O Direito Penal tem por objeto as normas que disciplinam o <span id="direito-punir" class=" cursor-pointer text-blue-500 hover:text-blue-600" phx-click="toggle_direito_punir">direito de punir</span> por meio de uma sanção penal.
+                      <span>O Direito Penal tem por objeto as normas que disciplinam o</span> <MenuComponents.toggle_text handle_event="toggle_direito_punir" text="direito de punir" />.
                     </p>
                     <%= if @toggle_direito_punir == :true do %>
-                        <p class="mt-2 text-sm text-gray-600">(O quê?, Quem?, Quando?, Por quê?, Onde?, Como?, Quanto?)</p>
+                        <div class="m-4 text-gray-600">
+                          <ul>
+                            <li><MenuComponents.toggle_text handle_event="toggle_direito_punir_abstrato" text="direito de punir em abstrato" /></li>
+                            <li><MenuComponents.toggle_text handle_event="toggle_direito_punir_concreto" text="direito de punir em concreto" /></li>
+                          </ul>
+                        </div>
+                    <% end %>
+
+                    <%= if @toggle_direito_punir_abstrato == :true do %>
+                        <p>É um direito permanente dado a uma entidade.</p>
+                        <p>Modernamente, essa entidade é o Estado.</p>
                     <% end %>
 
                     <.simple_form for={@tipo_infracao_penal_form} phx-change="get_tipo_infracao_penal">
@@ -61,6 +71,8 @@ defmodule SchoolWeb.Plataforma.DireitoPenalLive do
      |> assign(:tipo_tipo_crime_form, changeset_tipo_crime)
      |> assign(:tipo_tipo_crime, "")
      |> assign(:toggle_direito_punir, :false)
+     |> assign(:toggle_direito_punir_abstrato, :false)
+     |> assign(:toggle_direito_punir_concreto, :false)
 
     {:ok, socket}
   end
@@ -68,7 +80,23 @@ defmodule SchoolWeb.Plataforma.DireitoPenalLive do
   def handle_event("toggle_direito_punir", _params, socket) do
     socket =
       socket
-      |> assign(:toggle_direito_punir, not socket.assigns.toggle_direito_punir)
+      |> assign(:toggle_direito_punir, !socket.assigns.toggle_direito_punir)
+
+    {:noreply, socket}
+  end
+
+  def handle_event("toggle_direito_punir_abstrato", _params, socket) do
+    socket =
+      socket
+      |> assign(:toggle_direito_punir_abstrato, !socket.assigns.toggle_direito_punir_abstrato)
+
+    {:noreply, socket}
+  end
+
+  def handle_event("toggle_direito_punir_concreto", _params, socket) do
+    socket =
+      socket
+      |> assign(:toggle_direito_punir_concreto, !socket.assigns.toggle_direito_punir_concreto)
 
     {:noreply, socket}
   end

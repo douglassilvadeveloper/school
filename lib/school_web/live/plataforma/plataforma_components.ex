@@ -30,4 +30,13 @@ defmodule SchoolWeb.MenuComponents do
     </div>
     """
   end
+
+  attr :text, :string, required: true
+  attr :handle_event, :string, required: true
+
+  def toggle_text(assigns) do
+    ~H"""
+      <span class="cursor-pointer text-blue-500 hover:text-blue-600" phx-click={@handle_event}><%= @text %></span>
+    """
+  end
 end
