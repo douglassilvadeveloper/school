@@ -10,7 +10,7 @@ defmodule SchoolWeb.Home.HomeLive do
               Aprenda Direito de forma gratuita!
             </h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Entenda as normas jurídicas mesmo sem ter conhecimento na área.</p>
-            <.link navigate={~p"/plataforma"} class="rounded-full bg-gray-200 py-2 px-4 text-sm font-semibold text-slate-900 hover:bg-gray-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300/50 active:bg-orange-500">
+            <.link navigate={~p"/plataforma"} class="rounded-full bg-gray-200 py-2 px-4 text-sm font-semibold text-slate-900 hover:bg-gray-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-300/50 active:bg-gray-500">
                 Entre em nossa plataforma
             </.link>
         </div>
