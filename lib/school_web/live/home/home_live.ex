@@ -4,13 +4,13 @@ defmodule SchoolWeb.Home.HomeLive do
   def render(assigns) do
     ~H"""
     <!-- Hero Section -->
-    <section class="bg-red-900 text-gray-300 py-20">
+    <section class="bg-red-900 text-slate-300 py-20">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl md:text-5xlfont-bold mb-6 inline bg-gradient-to-r from-gray-200 via-white to-gray-200 bg-clip-text font-display text-5xl tracking-tight text-transparent">
               Aprenda Direito de forma gratuita!
             </h1>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Entenda as normas jurídicas mesmo sem ter conhecimento na área.</p>
-            <.link navigate={~p"/plataforma"} class="rounded-full bg-gray-200 py-2 px-4 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300/50 active:bg-orange-500">
+            <.link navigate={~p"/plataforma"} class="rounded-full bg-gray-200 py-2 px-4 text-sm font-semibold text-slate-900 hover:bg-gray-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300/50 active:bg-orange-500">
                 Entre em nossa plataforma
             </.link>
         </div>
@@ -29,7 +29,7 @@ defmodule SchoolWeb.Home.HomeLive do
                         </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Conteúdo Aprofundado</h3>
-                    <p class="text-gray-600">Material de estudo detalhado e completo, abrangendo lei seca, jurisprudência e doutrina.</p>
+                    <p class="text-slate-600">Material de estudo detalhado e completo, abrangendo lei seca, jurisprudência e doutrina.</p>
                 </div>
                 
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md">
@@ -39,7 +39,7 @@ defmodule SchoolWeb.Home.HomeLive do
                         </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Guias Interativos</h3>
-                    <p class="text-gray-600">Conteúdo interativo para a construção de uma linha lógica de raciocínio.</p>
+                    <p class="text-slate-600">Conteúdo interativo para a construção de uma linha lógica de raciocínio.</p>
                 </div>
                 
                 <div class="bg-gray-50 p-6 rounded-lg shadow-md">
@@ -49,7 +49,7 @@ defmodule SchoolWeb.Home.HomeLive do
                         </svg>
                     </div>
                     <h3 class="text-xl font-semibold mb-2">Questões e Dicas</h3>
-                    <p class="text-gray-600">Resolução de questões de concurso e dicas de memorização.</p>
+                    <p class="text-slate-600">Resolução de questões de concurso e dicas de memorização.</p>
                 </div>
             </div>
         </div>
@@ -66,8 +66,8 @@ defmodule SchoolWeb.Home.HomeLive do
                     <img src={~p"/images/direito-1.jpg"} alt="Imagem de Guia" class="w-full h-48 object-cover" />
                     <div class="p-6">
                         <span class="text-red-900 text-sm font-semibold">Direito Constitucional</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3">Entenda os principais ponto da Teoria da Constitucional</h3>
-                        <p class="text-gray-600 mb-4">Um guia completo para iniciantes que desejam aprender o essencial da Teoria da Constituição.</p>
+                        <h3 class="text-xl font-bold mt-2 mb-3">Entenda os principais pontos da Teoria da Constituição</h3>
+                        <p class="text-slate-600 mb-4">Um guia completo para iniciantes que desejam aprender o essencial da Teoria da Constituição.</p>
                         <.link navigate={~p"/plataforma"} class="text-red-900 font-medium hover:underline">Continuar lendo →</.link>
                     </div>
                 </article>
@@ -78,7 +78,7 @@ defmodule SchoolWeb.Home.HomeLive do
                     <div class="p-6">
                         <span class="text-red-900 text-sm font-semibold">Direito Penal</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">Guia de estudo essencial do Direito Penal</h3>
-                        <p class="text-gray-600 mb-4">Entenda de forma simples e objetiva como funciona o direito de punir do Estado.</p>
+                        <p class="text-slate-600 mb-4">Entenda de forma simples e objetiva como funciona o direito de punir do Estado.</p>
                         <.link navigate={~p"/plataforma"} class="text-red-900 font-medium hover:underline">Continuar lendo →</.link>
                     </div>
                 </article>
@@ -90,14 +90,14 @@ defmodule SchoolWeb.Home.HomeLive do
                     <div class="p-6">
                         <span class="text-red-900 text-sm font-semibold">Direito</span>
                         <h3 class="text-xl font-bold mt-2 mb-3">Os fundamentos do pensamento jurídico</h3>
-                        <p class="text-gray-600 mb-4">Domine os conceitos e ideias fundamentais do Direito.</p>
+                        <p class="text-slate-600 mb-4">Domine os conceitos e ideias fundamentais do Direito.</p>
                         <.link navigate={~p"/plataforma"} class="text-red-900 font-medium hover:underline">Continuar lendo →</.link>
                     </div>
                 </article>
             </div>
             
             <div class="text-center mt-12">
-                <.link navigate={~p"/plataforma"} class="bg-red-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-800 transition duration-300">Ver Todos os Guias</.link>
+                <.link navigate={~p"/plataforma"} class="bg-red-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-800 transition duration-300">Veja mais em nossa plataforma</.link>
             </div>
         </div>
     </section>
