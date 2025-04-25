@@ -683,4 +683,163 @@ defmodule SchoolWeb.CoreComponents do
   def translate_errors(errors, field) when is_list(errors) do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
+
+  @doc """
+  Renders a div Sala.
+
+  ## Examples
+
+  """
+  attr :titulo, :string, required: true
+  attr :subtitulo, :string, required: true
+
+  def sala(assigns) do
+    ~H"""
+    <div class="flex justify-between items-center shrink-0 h-16 bg-white border-b border-slate-300 px-4">
+      <div class="flex flex-col gap-1.5">
+        <h1 class="text-sm font-bold leading-none">
+          {@titulo}
+        </h1>
+        <div class="text-xs leading-none h-3.5">
+            <span class="text-slate-600">{@subtitulo}</span>
+        </div>
+      </div>
+    </div>
+    """
+  end
+
+  @doc """
+  Renders a div Principal.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def principal(assigns) do
+    ~H"""
+    <!-- Principal -->
+    <div class="flex w-full" style="height: calc(100vh - 4rem);">
+      <%= render_slot(@inner_block) %>
+    </div>
+    """
+  end
+  
+  @doc """
+  Renders a div Coluna Direita.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def coluna_direita(assigns) do
+    ~H"""
+    <!-- Coluna Direita -->
+    <div class="flex flex-col w-2/3 h-full border-r">
+      <%= render_slot(@inner_block) %>
+    </div>
+    """
+  end
+
+    @doc """
+  Renders a div Coluna Esquerda.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def coluna_esquerda(assigns) do
+    ~H"""
+    <!-- Coluna Esquerda -->
+    <div class="flex flex-col w-1/3 h-full">
+      <%= render_slot(@inner_block) %>
+    </div>
+    """
+  end
+
+  @doc """
+  Renders a div Doutrina.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def doutrina(assigns) do
+    ~H"""
+    <div class="h-2/3 overflow-y-auto">
+      <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
+        Doutrina
+      </h2>
+      <div class="p-4 text-sm">
+        <%= render_slot(@inner_block) %>
+      </div>
+    </div>
+    """
+  end
+
+  @doc """
+  Renders a div Questões.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def questoes(assigns) do
+    ~H"""
+    <div class="h-1/3 overflow-y-auto">
+      <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
+        Questões
+      </h2>
+      <div class="p-4 text-sm">
+        <%= render_slot(@inner_block) %>
+      </div>
+    </div>
+    """
+  end
+
+  @doc """
+  Renders a div Legislação.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def legislacao(assigns) do
+    ~H"""
+    <div class="h-1/2 overflow-y-auto">
+      <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
+        Legislação
+      </h2>
+      <div class="p-4 text-sm">
+        <%= render_slot(@inner_block) %>
+      </div>
+    </div>
+    """
+  end
+
+  @doc """
+  Renders a div Jurisprudência.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def jurisprudencia(assigns) do
+    ~H"""
+    <div class="h-1/2 overflow-y-auto">
+      <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
+        Jurisprudência
+      </h2>
+      <div class="p-4 text-sm">
+        <%= render_slot(@inner_block) %>
+      </div>
+    </div>
+    """
+  end
 end
