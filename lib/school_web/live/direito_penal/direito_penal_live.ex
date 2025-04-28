@@ -5,30 +5,30 @@ defmodule SchoolWeb.DireitoPenal.DireitoPenalLive do
     ~H"""
     <.sala titulo="Direito Penal" subtitulo="A infração penal, o direito de punir e a pena"/>
     <.principal>
-      <.coluna_direita>
+      <.coluna_esquerda>
         <.doutrina>
             <p class="mb-2">O Direito Penal pode ser entendido como a parte do Direito que cuida do <span class="font-bold">direito de punir</span>.</p>
             <p class="mb-2">O direito de punir, por sua vez, nasce a partir do momento em que se conclui que houve uma <span class="font-bold">infração penal</span>.</p>
             <p class="mb-2">E, por fim, para se concluir pela ocorrência de uma infração penal, deve-se definir quais <span class="font-bold">normas penais</span> devem ser aplicadas:</p>
             <ul class="mb-2 px-4 list-disc list-inside">
               <li>As normas penais brasileiras ou estrangeiras?</li>
-              <li>As normas penais do Código Penal ou de outras Legislações Penais?</li>
+              <li>As normas penais do Código Penal ou de outras legislações penais?</li>
             </ul>
             <p class="mb-2">Em suma, para se aplicar uma pena a alguém, temos que percorrer este caminho:</p>
             <p class="mb-2 p-4 bg-blue-50 rounded">normas penais (gerais ou específicas) <span aria-hidden="true">&rarr;</span> infração penal  <span aria-hidden="true">&rarr;</span> direito de punir (punibilidade)<span aria-hidden="true">&rarr;</span> pena</p>
         </.doutrina>
         <.questoes>
         </.questoes>
-      </.coluna_direita>
+      </.coluna_esquerda>
 
-      <.coluna_esquerda>
+      <.coluna_direita>
         <.legislacao>
             <p class="mb-2">Decreto-Lei Nº 2.848, de 7 de dezembro de 1940 (Código Penal)</p>
             <p class="mb-2">Art. 12 - As regras gerais deste Código aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso.</p>
         </.legislacao>
         <.jurisprudencia>
         </.jurisprudencia>
-      </.coluna_esquerda>
+      </.coluna_direita>
     </.principal>
     """
   end

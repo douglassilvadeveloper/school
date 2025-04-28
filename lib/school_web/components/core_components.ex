@@ -726,24 +726,7 @@ defmodule SchoolWeb.CoreComponents do
   end
   
   @doc """
-  Renders a div Coluna Direita.
-
-  ## Examples
-
-  """
-  slot :inner_block, required: false
-
-  def coluna_direita(assigns) do
-    ~H"""
-    <!-- Coluna Direita -->
-    <div class="flex flex-col w-2/3 h-full border-r">
-      <%= render_slot(@inner_block) %>
-    </div>
-    """
-  end
-
-    @doc """
-  Renders a div Coluna Esquerda.
+  Renders a div coluna esquerda.
 
   ## Examples
 
@@ -752,7 +735,24 @@ defmodule SchoolWeb.CoreComponents do
 
   def coluna_esquerda(assigns) do
     ~H"""
-    <!-- Coluna Esquerda -->
+    <!-- Coluna esquerda -->
+    <div class="flex flex-col w-2/3 h-full border-r border-slate-300">
+      <%= render_slot(@inner_block) %>
+    </div>
+    """
+  end
+
+    @doc """
+  Renders a div coluna direita.
+
+  ## Examples
+
+  """
+  slot :inner_block, required: false
+
+  def coluna_direita(assigns) do
+    ~H"""
+    <!-- Coluna direita -->
     <div class="flex flex-col w-1/3 h-full">
       <%= render_slot(@inner_block) %>
     </div>
@@ -769,7 +769,7 @@ defmodule SchoolWeb.CoreComponents do
 
   def doutrina(assigns) do
     ~H"""
-    <div class="h-2/3 overflow-y-auto">
+    <div class="h-2/3 overflow-y-auto border-b border-slate-300">
       <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
         Doutrina
       </h2>
@@ -811,7 +811,7 @@ defmodule SchoolWeb.CoreComponents do
 
   def legislacao(assigns) do
     ~H"""
-    <div class="h-1/2 overflow-y-auto">
+    <div class="h-1/2 overflow-y-auto border-b border-slate-300">
       <h2 class="text-sm font-bold leading-none bg-neutral-100 px-4 py-2">
         Legislação
       </h2>
@@ -840,6 +840,21 @@ defmodule SchoolWeb.CoreComponents do
         <%= render_slot(@inner_block) %>
       </div>
     </div>
+    """
+  end
+
+  @doc """
+  Renders a parágrafo simples.
+
+  ## Examples
+
+  """
+  attr :texto, :string, required: true
+  attr :class, :string, default: ""
+
+  def p(assigns) do
+    ~H"""
+    <p class={["mb-2", @class]}>{@texto}</p>
     """
   end
 end
