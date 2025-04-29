@@ -52,9 +52,9 @@ defmodule SchoolWeb.Direito.DireitoLive do
             </div>
           </div>
           <.p texto="É, por isso, que se diz, conforme a concepção de Hans Kelsen, que a Natureza está no mundo do 'ser', enquanto o Direito está no mundo do 'dever-ser', 
-            ou seja, no mundo em as consequências previstas não acontecem necessariamente, mas sim no mundo em que elas dependem de uma série de atos humanos para torná-las uma realidade." />
+            ou seja, no mundo em as consequências previstas não acontecem necessariamente, mas sim no mundo ideal, em que as consequências dependem de uma série de atos humanos para se tornar uma realidade." />
          
-          <.p texto="Essa concepção de que o Direito é um sistema de causas e consequências tem grande utilidade, porém não é o suficiente, uma vez que é preciso enxergá-lo em um nível menor de abstração." class="font-bold"/>
+          <.p texto="Essa concepção de que o Direito é um sistema de causas e consequências tem grande utilidade, porém não é o suficiente, uma vez que é preciso enxergá-lo em um nível menor de abstração. (Veremos isso mais tarde.)" class="font-bold"/>
         </.doutrina>
         <.questoes>
           <.p texto="A banca FCC, no concurso da Câmara de Fortaleza-CE, de 2019, considerou correta a seguinte afirmação:"/>

@@ -857,4 +857,31 @@ defmodule SchoolWeb.CoreComponents do
     <p class={["mb-2", @class]}>{@texto}</p>
     """
   end
+
+  attr :texto, :string, required: true
+
+  def span_bold(assigns) do
+    ~H"""
+    <span class="font-bold">{@texto}</span>
+    """
+  end
+
+  slot :inner_block, required: false
+
+  def interagindo(assigns) do
+    ~H"""
+    <div class="my-8 flex rounded-3xl p-6 bg-slate-100">
+      <div><span class="hero-face-smile h-6 w-6 my-1 text-sky-900"></span></div>
+      <div class="ml-4 flex-auto">
+        <p class="m-0 font-display text-lg text-sky-900">
+          Interagindo
+        </p>
+        <div class="prose mt-2.5 text-sky-800 [--tw-prose-background:theme(colors.sky.50)] prose-a:text-sky-900 prose-code:text-sky-900 dark:text-slate-300 dark:prose-code:text-slate-300">
+          <.p texto="Interaja com as caixas de seleção abaixo e veja o que podemos descobrir sobre cada opção." />
+        </div>
+        <%= render_slot(@inner_block) %>
+      </div>
+    </div>
+    """
+  end
 end
